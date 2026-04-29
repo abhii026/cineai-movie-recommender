@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎬 AI Movie Recommender</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- ── LEFT SIDEBAR ── -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-icon">🎬</span>
+        <span class="brand-name">CineAI</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-label">Quick Picks</p>
+        <button class="nav-btn" onclick="sendChip('Action movies')">🔥 Action</button>
+        <button class="nav-btn" onclick="sendChip('Comedy movies')">😂 Comedy</button>
+        <button class="nav-btn" onclick="sendChip('Horror movies')">👻 Horror</button>
+        <button class="nav-btn" onclick="sendChip('Romance movies')">❤️ Romance</button>
+        <button class="nav-btn" onclick="sendChip('Sci-Fi movies')">🚀 Sci-Fi</button>
+        <button class="nav-btn" onclick="sendChip('Thriller movies')">🕵️ Thriller</button>
+        <button class="nav-btn" onclick="sendChip('Animated movies')">🎨 Animated</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="dev-card">
+          <div class="dev-avatar">AS</div>
+          <div class="dev-info">
+            <p class="dev-name">Abhishek Singh & Ayush Singh</p>
+            <p class="dev-role">AI/ML Project · 2026</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN CHAT AREA ── -->
+    <main class="chat-area">
+
+      <!-- Header -->
+      <header class="chat-header">
+        <div class="header-left">
+          <div class="header-avatar">🤖</div>
+          <div>
+            <h1 class="header-title">AI Movie Recommender</h1>
+            <p class="header-sub">Ask me anything about movies</p>
+          </div>
+        </div>
+        <div class="header-status">
+          <span class="status-dot"></span>
+          <span>Online</span>
+        </div>
+      </header>
+
+      <!-- Messages -->
+      <section class="chat-body" id="chatBody">
+        <div class="message bot-message" id="welcomeMsg">
+          <div class="avatar-wrap">🤖</div>
+          <div class="bubble">
+            <p>Hey there! 👋 I'm your <strong>AI Movie Expert</strong>.</p>
+            <p style="margin-top:6px">Tell me your mood or a genre and I'll find <strong>3 perfect movies</strong> for you — with posters!</p>
+            <p class="hint-text">Try: <em>"thriller for a rainy night"</em> or <em>"feel-good comedy for weekend"</em></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Input -->
+      <footer class="chat-footer">
+        <div class="input-wrap">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Ask for a movie recommendation..."
+            autocomplete="off"
+          />
+          <button id="sendBtn" onclick="sendMessage()" title="Send">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <p class="footer-note">Abhishek Singh & Ayush Singh &nbsp;·&nbsp; INT428: Artificial Intelligence Essentials</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
